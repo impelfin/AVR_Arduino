@@ -1,7 +1,7 @@
 /*
  * Uno_7Segment.c
  *
- * Created: 2017-11-07 ¿ÀÈÄ 8:22:36
+ * Created: 2017-11-07 Â¿Ã€ÃˆÃ„ 8:22:36
  * Author : Moon
  */ 
 
@@ -37,8 +37,6 @@ int main(void)
 {
 	DDRB = 0xFF;
 	DDRD = 0xFF;
-	PORTB = 0x00;
-	PORTD = 0x00;
 	
 	while (1)
 	{
