@@ -4,14 +4,13 @@
 #include <util/delay.h>
 
 #define DEBOUCE_MS 500
-#define NUMBER 8
 
 int main(void) {
 	DDRB = 0x0F;
 	DDRD = 0xF0;
 	
 	while (1) {
-		for (int i = 0; i <= NUMBER; ++i) {
+		for (int i = 0; i < 8; ++i) {
 			if (i < 4) {
 				PORTD |= 0x10 << i;
 			} else {
