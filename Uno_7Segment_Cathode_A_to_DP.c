@@ -10,15 +10,15 @@ int main(void) {
 	DDRD = 0xF0;
 	
 	while (1) {
-		for(int i=0;i<8;i++) {
-			if(i<4) {
+		for (int i = 0; i < 8; ++i) {
+			if (i < 4) {
 				PORTB = 0;
-				PORTD = 1<<(i+4);
+				PORTD = 0x10 << i;
 			} else {
 				PORTD = 0;
-				PORTB = 1<<(i-4);
+				PORTB = 0x01 << (i % 4);
 			}
 			_delay_ms(DEBOUCE_MS);
-		} 
+		}
 	}
 }
