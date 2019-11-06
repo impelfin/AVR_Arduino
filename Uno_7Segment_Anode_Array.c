@@ -20,8 +20,7 @@ void display_7segled(unsigned int number) {
 	PORTD = digit_d[number];
 }
 
-int main(void)
-{
+int main(void) {
 	DDRB = 0xFF;
 	DDRD = 0xFF;
 	
