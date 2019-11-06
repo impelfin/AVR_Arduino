@@ -24,6 +24,8 @@
 #define A4 PC4
 #define A5 PC5
 
+#define A5 PC5
+
 #define DEBOUCE_MS 500
 
 int main(void) {
