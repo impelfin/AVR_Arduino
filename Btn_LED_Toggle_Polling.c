@@ -8,8 +8,7 @@
 int main(void) {
 	DDRB = 0x21;
 	
-	unsigned char o_sw, n_sw;
-	unsigned int led_state=0;
+	unsigned char o_sw, n_sw, led_state=0;
 	
 	o_sw = PINB & (1<<PINB1);
 	
