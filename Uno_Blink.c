@@ -1,3 +1,10 @@
+/*
+ * Blink.c
+ *
+ * Created: 2020-04-03 오전 1:24:32
+ * Author : Lune
+ */ 
+
 #define F_CPU 16000000UL
 
 #include <avr/io.h>
