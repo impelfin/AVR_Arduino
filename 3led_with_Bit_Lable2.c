@@ -11,7 +11,7 @@ int main(void)
 	{
 		PORTB = PORTB & ~(1<<PB2 | 1<<PB1 | 1<<PB0);
 		
-		PORTB = 1<<PB0;
+		PORTB = PORTB | 1<<PB0;
 		_delay_ms(1000);
 				
 		PORTB = PORTB & ~(1<<PB0) | 1<<PB1;
