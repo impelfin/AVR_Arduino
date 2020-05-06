@@ -39,17 +39,19 @@ int main(void) {
 		
 		if(led_state0 == 0) {
 			PORTB |= 1<<D1 | 1<<D0;
-			} else {
+		} else {
 			PORTB &= ~(1<<D1) & ~(1<<D0);
 		}
+		
 		if(led_state1 == 0) {
 			PORTB |= 1<<D2;
-			} else {
+		} else {
 			PORTB &= ~(1<<D2);
 		}
+		
 		if(led_state2 == 0) {
 			PORTB |= 1<<D4 | 1<<D3;
-			} else {
+		} else {
 			PORTB &= ~(1<<D4) & ~(1<<D3);
 		}
 	}
