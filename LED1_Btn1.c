@@ -7,7 +7,7 @@ int main(void) {
 	DDRB = DDRB | (1<<PB0);
 	DDRD = DDRD & ~(1<<PD5);
 	
-	int sw;
+	unsigned char sw;
 	
     	while (1) {
 		sw = PIND & (1<<PD5);
