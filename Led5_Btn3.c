@@ -13,26 +13,26 @@
 #include <avr/io.h>
 
 int main(void) {
-  
 	DDRB |= 1<<D4 | 1<<D3 | 1<<D2 | 1<<D1 | 1<<D0;
 	DDRD &= ~(1<<S2) & ~(1<<S1) & ~(1<<S0);
 	
 	while (1) {
 		if(!(PIND & (1<<S0))) {
 			PORTB |= 1<<D1 | 1<<D0;
-			} else {
+		} else {
 			PORTB &= ~(1<<D1) & ~(1<<D0);
 		}
+		
 		if(!(PIND & (1<<S1))) {
 			PORTB |= 1<<D2;
-			} else {
+		} else {
 			PORTB &= ~(1<<D2);
 		}
+		
 		if(!(PIND & (1<<S2))) {
 			PORTB |= 1<<D4 | 1<<D3;
-			} else {
+		} else {
 			PORTB &= ~(1<<D4) & ~(1<<D3);
 		}
 	}
 }
-
