@@ -28,7 +28,7 @@ int main(void) {
 		
 		if(led_state == 0) {
 			PORTB |= 1<<D1 | 1<<D0;
-			} else {
+		} else {
 			PORTB &= ~(1<<D1) & ~(1<<D0);
 		}
 	}
