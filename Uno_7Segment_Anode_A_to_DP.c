@@ -12,15 +12,15 @@ int main(void) {
 	PORTD = 0xF0;
 	
     while (1) {
-		for(int i=0; i<8; ++i) {	
-			if(i<4) {
-				PORTB = 0xFF;
-				PORTD = 0xEF<<i;	//0b11101111;
-			} else {
-				PORTD = 0xFF;
-				PORTB = ~(0x01<<(i%4));
-			}
-			_delay_ms(DEBOUCE_MS);
+	for(int i=0; i<8; ++i) {	
+		if(i<4) {
+			PORTB = 0xFF;
+			PORTD = 0xEF<<i;	//0b11101111;
+		} else {
+			PORTD = 0xFF;
+			PORTB = ~(0x01<<(i%4));
 		}
+		_delay_ms(DEBOUCE_MS);
+	}
     }
 }
